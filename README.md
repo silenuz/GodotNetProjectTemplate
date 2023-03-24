@@ -52,7 +52,7 @@ Note on windows it is currently necessary to escape the back slashes in the godo
 
 You would use:
 
-`dotnet new Godot -o {NameOfProject} -G c:\\Godot\\Godot4.ex`
+`dotnet new Godot -o {NameOfProject} -G c:\\Godot\\Godot4.exe`
 
 This will create a project that already has the necessary launch settings for running or debugging your code in Visual Studio or Jetbrains' Rider.
 
