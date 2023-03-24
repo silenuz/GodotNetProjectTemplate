@@ -22,7 +22,7 @@ After copying the folder, open a terminal in the Godot.Net.template folder and e
 
     Linux:
 
-    dotnet new install .
+    dotnet new install ./
 
     Mac:
 
@@ -36,7 +36,7 @@ After copying the folder, open a terminal in the Godot.Net.template folder and e
 
     Linux:
 
-    dotnet new --install .
+    dotnet new --install ./
 
     Mac:
 
@@ -56,7 +56,7 @@ You would use:
 
 This will create a project that already has the necessary launch settings for running or debugging your code in Visual Studio or Jetbrains' Rider.
 
-After creating the project simply open it int Godot editor and start working.
+After creating the project simply open it in the Godot editor and start working.
 
 If you are creating the project as a child project of a solution,then you would pass a third argument to dotnet new , setting EnabledManagedSolution to true like so:
 
@@ -90,7 +90,7 @@ Open a terminal in the Godot.Net.template folder and execute:
 
     Linux:
 
-    dotnet new uninstall .
+    dotnet new uninstall ./
 
     Mac:
 
@@ -104,7 +104,7 @@ Open a terminal in the Godot.Net.template folder and execute:
 
     Linux:
 
-    dotnet new --uninstall .
+    dotnet new --uninstall ./
 
     Mac:
 
