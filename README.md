@@ -58,7 +58,7 @@ This will create a project that already has the necessary launch settings for ru
 
 After creating the project simply open it int Godot editor and start working.
 
-If you are creating the project as a child project of a solution, or running the template from an IDE such as Visual Studio or Rider, then you would pass a third argument to DotNet New , setting EnabledManagedSolution to true like so:
+If you are creating the project as a child project of a solution,then you would pass a third argument to dotnet new , setting EnabledManagedSolution to true like so:
 
 `dotnet new Godot -o {NameOfProject} -G {PathToGodtotExe} -E true`
 
