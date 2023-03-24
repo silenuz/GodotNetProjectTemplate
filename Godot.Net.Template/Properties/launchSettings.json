@@ -3,15 +3,15 @@
   "profiles": {
     "Player": {
       "commandName": "Executable",
-      "executablePath": "{$GodotPath}",
-      "commandLineArgs": "--path $(ProjectDir)",
+      "executablePath": "{$GodotPath}}",
+      "commandLineArgs": "--path \"$(ProjectDir)",
       "workingDirectory": "$(ProjectDir)",
       "nativeDebugging": true
     },
     "Editor": {
       "commandName": "Executable",
-      "executablePath": "{$GodotPath}",
-      "commandLineArgs": "--path $(ProjectDir) --editor",
+      "executablePath": "{GodotPath}",
+      "commandLineArgs": "--path \"$(ProjectDir)\" --editor",
       "workingDirectory": "$(ProjectDir)",
       "nativeDebugging": true
     }
