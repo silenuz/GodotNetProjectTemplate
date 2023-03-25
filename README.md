@@ -62,9 +62,44 @@ If you are creating the project as a child project of a solution,then you would 
 
 `dotnet new Godot -o {NameOfProject} -G {PathToGodtotExe} -E true`
 
-Note that while this template will be available from the IDE project types in Rider and Visual Studio, it is best to use the command line to create the project, 
-and then use add existing project to add it to the current solution, as there is no way in Rider nor Visual Studio to fill in the above parameter, which means the 
-solution file generated in the project folder will have to be removed, and the solution folder path set in the Godot editor to fix it.  
+This will cause the solution path in the Godot project to point one folder up.
+
+If this option is not enabled and you are creating the project in Visual Studio you will end up with two solution files.  One in the project folder, and the one created by VS.
+
+If this happens, just delete the solution file in the project folder, and change the project settings to point to the solution file created by Visual Studio.  For more information see below.
+
+It is not recommended to use the template directly in Rider as there currently seems to be no way to set the custom parameters.
+
+By default the project is created targeting Net 6.0, if you wish it to target Net 7.0 then use the -F argument like so:
+
+`dotnet new Godot -o {NameOfProject} -G {PathToGodtotExe} -F net7.0`
+
+`dotnet new Godot -h` will return a list of the parameters and their descriptions.
+
+Once the template is installed you can also use Visual Studio to create a Godot project.
+
+Select the Godot project type from the project types.
+
+![Godot Project Type](images/Vs-template-wizard1.png)
+
+Give it a Project Name:
+
+![Godot Project Type Step Two](images/Vs-template-wizard2.png)
+
+Fill in the Path to the Godot exe (on windows use double back slashes), and check EnableManagedSolution
+![Godot Project Type Step Three](images/Vs-template-wizard3.png)
+
+
+Once the project is created, when loaded in either in Rider or Visual Studio there will be two launch profile available immediately.  Player and Editor.
+
+Use the player profile for running/debugging games and the editor profile for running/debugging plugins and tools.
+
+In fact of these profiles can be launched immediately on creation, but because there is no main scene yet the player profile will simply report that and stop.
+
+The editor profile will simply open the Godot editor at this point.
+
+
+#### Changing Solution File in Godot Editor
 
 Editor->Project Settings Enable advanced
 
@@ -72,11 +107,7 @@ Scroll down to Dotnet and set the solution folder to be the correct path.
 
 This will automatically adjust the solution path in the Godot project file.
 
-By default the project is created targeting Net 6.0, if you wish it to target Net 7.0 then use the -F argument like so:
 
-`dotnet new Godot -o {NameOfProject} -G {PathToGodtotExe} -F net7.0`
-
-`dotnet new Godot -h` will return a list of the parameters and their descriptions.
 
 ### Uninstalling
 
