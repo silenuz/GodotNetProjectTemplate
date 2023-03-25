@@ -11,7 +11,7 @@
     "Editor": {
       "commandName": "Executable",
       "executablePath": "{$GodotPath}",
-      "commandLineArgs": "--path \"$(ProjectDir)\" --editor",
+      "commandLineArgs": "--path \"$(ProjectDir)\\\" --editor",
       "workingDirectory": "$(ProjectDir)",
       "nativeDebugging": true
     }
